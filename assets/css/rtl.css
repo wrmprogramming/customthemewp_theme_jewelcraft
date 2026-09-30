@@ -1,0 +1,71 @@
+/**
+ * استایل‌های RTL (راست‌چین)
+ *
+ * این فایل فقط برای اصلاح موارد خاص RTL است.
+ * بیشتر استایل‌ها در main.css با direction: rtl تنظیم شده‌اند.
+ */
+
+/* اصلاح آیکون‌های جهت‌دار */
+.jc-post-nav__item--prev a::before {
+    content: '→ ';
+}
+
+.jc-post-nav__item--next a::after {
+    content: ' ←';
+}
+
+/* اصلاح منوی کشویی */
+.jc-nav .sub-menu {
+    right: 0;
+    left: auto;
+    text-align: right;
+}
+
+/* اصلاح چیدمان گرید در حالت RTL */
+.jc-products,
+.jc-features,
+.jc-posts-grid {
+    direction: rtl;
+}
+
+/* اصلاح اسلایدر ووکامرس */
+.woocommerce-product-gallery .flex-direction-nav a.flex-prev {
+    right: 10px;
+    left: auto;
+}
+
+.woocommerce-product-gallery .flex-direction-nav a.flex-next {
+    left: 10px;
+    right: auto;
+}
+
+/* اصلاح checkbox و radio ووکامرس */
+.woocommerce form .form-row .input-checkbox {
+    margin-left: 8px;
+    margin-right: 0;
+}
+
+/* اصلاح پیام‌های ووکامرس */
+.woocommerce-message,
+.woocommerce-info,
+.woocommerce-error {
+    border-right: 4px solid;
+    border-left: none;
+}
+
+/* اصلاح سبد خرید و تسویه */
+.woocommerce-cart-form__cart-item .product-remove {
+    text-align: left;
+}
+
+/* اصلاح جدول قیمت‌ها */
+.woocommerce table.shop_table td,
+.woocommerce table.shop_table th {
+    text-align: right;
+}
+
+/* اصلاح سایدبار */
+.jc-widget ul a:hover {
+    padding-right: 5px;
+    padding-left: 0;
+}
